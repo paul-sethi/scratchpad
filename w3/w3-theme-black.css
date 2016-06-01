@@ -7,7 +7,7 @@
 .w3-theme-light {color:#000 !important; background-color:#f0f0f0 !important}
 .w3-theme-dark {color:#fff !important; background-color:#000000 !important}
 .w3-theme-action {color:#fff !important; background-color:#000000 !important}
-.w3-theme-border {border-color:#000000 !important}
+.w3-theme-border {border-color:#cccccc !important}
 .w3-text-theme {color:#000000 !important}
 .w3-text-alt {color:#888 !important; background-color:#000000 !important}
 .w3-hover-theme:hover {color:#000 !important; background-color:#FFFFFF !important}
@@ -15,15 +15,15 @@
 .banner
 {
 	width: 100%;
-    bottom: 40%;
     top: 0;
     left: 0;
     position: fixed;
+	z-index: -10;
 }
 
 .main-body
 {
 	position: absolute;
-    top: 40%;
+    top: 324px;
     width: 100%;
 }
