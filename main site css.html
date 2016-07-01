@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        html body, h1, h2, h3, h4, h5, h6 {
+            font-family: Calibri;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            padding: 0;
+            
+        }
+        .navitem {
+            display: inline-block;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            border-bottom: solid;
+        }
+        nav a {
+            display: inline-block;
+            text-align: center;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .themeLight {
+            color: #000;
+	        background-color: #cccccc;
+            position: relative;
+        }
+
+        .themeDark {
+            color: #fff;
+	        background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <ul class="navbar">
+        <li class="navitem">Link 1</li>
+        <li class="navitem">Link 2</li>
+    </ul>-->
+
+    <nav class="themeDark">
+        <a href="#">Home</a>
+        <a href="#">Link 1</a> 
+        <a href="#">Link 2</a> 
+        <a href="#">Link 3</a> 
+        <a href="#">Link 4</a>
+    </nav>
+
+    <div class="themeLight">
+        Holla
+    </div>
+</body>
+</html>

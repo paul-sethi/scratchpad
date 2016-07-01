@@ -2,9 +2,12 @@
 
 namespace ConsoleApplication2
 {
-	public class Program
-	{
-		public static void Main(string[] args)
+    public class Program
+    {
+        private static const bool ReloadAll = true;
+        private static const string HandDirectory = "C:/";
+
+        public static void Main(string[] args)
 		{
 			
 		}
@@ -12,11 +15,56 @@ namespace ConsoleApplication2
 		public static void parseFile(string filePath)
 		{
 			string[] lines = File.ReadAllLines(filePath);
+
+            bool handStart = false;
+            bool handID = false;
+            bool seat = false;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (!handStart)
+                {
+
+                    handStart = true;
+                    break;
+                }
+
+                if (!handID)
+                {
+                    // check if hand is already in database or not
+                    // also maybe check another flag, like replace all in database (you can do this to reimport all hands)
+                    if (lines[i].StartsWith("Game ID:"))
+                    {
+                        
+                    }
+
+                    handID = true;
+                    break;
+                }
+                
+
+                if (lines[i].StartsWith("Seat:"))
+                {
+                    //match players to IDs
+                    //player hand summary (positions etc.)
+
+                }
+
+                string[] line = lines[i].Split(" ", System.StringSplitOptions.RemoveEmptyEntries);
+
+                if (lines[i].StartsWith("Game ended"))
+                {
+
+                }
+            }
+            
 		}
+
+
 
 		public static void stuff()
 		{
-			string[] filePaths = Directory.GetFiles("C:/","HH*.txt", SearchOption.TopDirectoryOnly);
+			string[] filePaths = Directory.GetFiles(HandDi,"HH*.txt", SearchOption.TopDirectoryOnly);
 
 			foreach(string filePath in filePaths)
 			{
